@@ -1,5 +1,6 @@
 const app=require('express')();
 const http=require('http').createServer(app);
+const port = Process.env.PORT || 3000 ;
 
 app.get('/',(req,res)=>{
     res.send('hello from server')
@@ -15,4 +16,4 @@ socket.on('connection',(userSocket)=>{
 })
 
 
-http.listen(process.env.PORT || 8080)
+http.listen(port);
